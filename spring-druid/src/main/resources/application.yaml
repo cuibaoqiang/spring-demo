@@ -4,6 +4,7 @@ spring:
     username: root
     password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat,wall # 开启sql监控 sql防火墙
   jdbc:
     template:
       query-timeout: 3
