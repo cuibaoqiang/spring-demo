@@ -1,7 +1,9 @@
 package org.spring.demo.controller;
 
 import org.spring.demo.bean.Account;
+import org.spring.demo.bean.City;
 import org.spring.demo.service.AccountService;
+import org.spring.demo.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,12 +14,24 @@ import org.springframework.web.bind.annotation.RestController;
  * @desc
  */
 @RestController
-public class AccountController {
+public class TestController {
     @Autowired
     private AccountService accountService;
+    @Autowired
+    private CityService cityService;
 
     @RequestMapping("accoount")
     public Account getById(Long id) {
         return accountService.getById(id);
+    }
+
+    @RequestMapping("city")
+    public City getCityById(Long id) {
+        return cityService.getById(id);
+    }
+
+    @RequestMapping("addCity")
+    public City addCity(City city) {
+        return cityService.addCity(city);
     }
 }
