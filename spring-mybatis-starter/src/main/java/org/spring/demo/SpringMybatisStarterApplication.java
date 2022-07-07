@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2022-07-07 21:41:07
  * @desc
  */
+//@MapperScan("org.spring.demo.mapper")
 @SpringBootApplication
 public class SpringMybatisStarterApplication {
     public static void main(String[] args) {
