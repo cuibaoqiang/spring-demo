@@ -11,4 +11,6 @@ public interface CityService {
     City getById(Long id);
 
     City addCity(City city);
+
+    City saveCity(City city);
 }

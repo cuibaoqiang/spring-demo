@@ -23,6 +23,12 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public City addCity(City city) {
+        cityMapper.addCity(city);
+        return city;
+    }
+
+    @Override
+    public City saveCity(City city) {
         cityMapper.insert(city);
         return city;
     }

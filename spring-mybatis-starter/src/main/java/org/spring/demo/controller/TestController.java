@@ -34,4 +34,9 @@ public class TestController {
     public City addCity(City city) {
         return cityService.addCity(city);
     }
+
+    @RequestMapping("saveCity")
+    public City saveCity(City city) {
+        return cityService.saveCity(city);
+    }
 }
