@@ -1,4 +1,4 @@
-package org.spring.demo.springdruid.controller;
+package org.spring.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
