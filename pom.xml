@@ -19,6 +19,7 @@
         <module>spring-jdbc</module>
         <module>spring-druid-starter</module>
         <module>spring-mybatis-starter</module>
+        <module>spring-mybatis-plus-starter</module>
     </modules>
     <dependencies>
         <dependency>
