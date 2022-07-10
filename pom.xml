@@ -20,6 +20,7 @@
         <module>spring-druid-starter</module>
         <module>spring-mybatis-starter</module>
         <module>spring-mybatis-plus-starter</module>
+        <module>spring-redis</module>
     </modules>
     <dependencies>
         <dependency>

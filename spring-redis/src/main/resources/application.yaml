@@ -1,0 +1,6 @@
+spring:
+  redis:
+#    port: localhost
+#    host: 55000
+#    password: redispw
+    url: redis://default:redispw@localhost:55000
