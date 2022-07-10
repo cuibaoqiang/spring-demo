@@ -1,5 +1,6 @@
 package org.spring.demo.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.spring.demo.bean.Account;
 import org.spring.demo.bean.City;
 import org.spring.demo.service.AccountService;
@@ -23,6 +24,12 @@ public class TestController {
     @RequestMapping("accoount")
     public Account getById(Long id) {
         return accountService.getById(id);
+    }
+
+    @RequestMapping("page")
+    public Page<Account> page(Long current, Long size) {
+        Page<Account> page = new Page<>(current, size);
+        return accountService.page(page);
     }
 
     @RequestMapping("city")
