@@ -4,3 +4,4 @@ spring:
 #    host: 55000
 #    password: redispw
     url: redis://default:redispw@localhost:55000
+    client-type: jedis
