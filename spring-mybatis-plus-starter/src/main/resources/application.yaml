@@ -27,3 +27,12 @@ spring:
   jdbc:
     template:
       query-timeout: 3
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    enabled-by-default: true
+  endpoint:
+    health:
+      show-details: always
