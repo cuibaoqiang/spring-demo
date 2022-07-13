@@ -33,8 +33,6 @@ spring:
         url: http://localhost:8888
         instance:
           service-url: http://localhost:8080
-  profiles:
-    active: dev
 management:
   endpoints:
     web:
@@ -55,3 +53,6 @@ info:
   appVersiion: 1.0
   mavenName: @project.artifactId@
   mavenVersion: @project.version@
+
+demo:
+  name: 测试

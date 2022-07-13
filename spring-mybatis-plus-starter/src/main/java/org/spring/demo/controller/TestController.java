@@ -6,6 +6,7 @@ import org.spring.demo.bean.City;
 import org.spring.demo.service.AccountService;
 import org.spring.demo.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,10 +17,19 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
+
+    @Value("${demo.name:未知}")
+    private String name;
+
     @Autowired
     private AccountService accountService;
     @Autowired
     private CityService cityService;
+
+    @RequestMapping("")
+    public String name() {
+        return name;
+    }
 
     @RequestMapping("accoount")
     public Account getById(Long id) {
