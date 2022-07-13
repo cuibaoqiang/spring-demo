@@ -27,12 +27,18 @@ spring:
   jdbc:
     template:
       query-timeout: 3
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+        instance:
+          service-url: http://localhost:8080
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-    enabled-by-default: false
+    enabled-by-default: true
   endpoint:
     health:
       show-details: always
