@@ -3,6 +3,8 @@ package org.spring.demo.config;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import org.spring.demo.bean.HelloProperties;
+import org.spring.demo.service.HelloService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,5 +24,14 @@ public class MybatisConfig {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
+    }
+
+    /**
+     * 也可以自定义HelloService
+     */
+//    @Bean
+    public HelloService helloService() {
+        HelloService helloService = new HelloService();
+        return helloService;
     }
 }

@@ -55,3 +55,9 @@ info:
   appVersiion: 1.0
   mavenName: @project.artifactId@
   mavenVersion: @project.version@
+
+org:
+  spring:
+    demo:
+      prefix: demo
+      suffix: hi
